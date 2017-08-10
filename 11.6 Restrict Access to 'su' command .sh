@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#11.6 Restrict Access to 'su'
 printf "\e[0m \n Restrict Access to the su command \n "
 
 if cat /etc/pam.d/su | grep "^auth		required	pam_wheel.so use_uid" > /dev/null; then # Grep "auth		required	pam_wheel.so use_uid" from /etc/pam.d/su and remove the output with "/dev/null"
