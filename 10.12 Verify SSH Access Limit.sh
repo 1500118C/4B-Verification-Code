@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#10.12 Verify SSH Access Limit
 printf "\e[0m Checking the Allowed Users:  \n \033[33;32m"
 if grep "^AllowUsers[[:space:]]" /etc/ssh/sshd_config > /dev/null; then # Grep "AllowUsers[[:space:]]" to check if there are any users and remove the output with "/dev/null"
 	grep "^AllowUsers" /etc/ssh/sshd_config | sed -n -e 's/^.*AllowUsers //p'
