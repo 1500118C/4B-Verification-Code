@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#9.5 Set User,Group Owner and Permission for etc cron(hourly,daily,weekly,monthly)
 printf "\e[0m Checking if /etc/cron.hourly file has the correct permissions \n"
 if ls -ld /etc/cron.hourly | grep drwx------ >/dev/null; then # Grep the permissions from ls -l /etc/cron.hourly to ensure permissions is correct and remove the output with "/dev/null"
 	printf "\033[33;32m PASS \n"
