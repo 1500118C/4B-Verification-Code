@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#10.11 Verify SSH Idle Timeout Interval
 printf "\e[0m Checking if ClientAliveInterval is correct:  \n"
 if grep "^ClientAliveInterval 300" /etc/ssh/sshd_config > /dev/null; then # Grep "ClientAliveInterval 300" to ensure settings is correct and remove the output with "/dev/null"
         printf "\033[33;32m PASS \n"
