@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#9.8 Restrict at cron to Authorized Users
 printf "\e[0m Checking if cron is restricted to Authorized Users \n"
 if ls -l /etc/cron.allow | grep -e -rw------- >/dev/null; then # Grep the permissions from ls -l /etc/cron.allow to ensure permissions is correct and remove the output with "/dev/null"
 	printf "\033[33;32m PASS \n"
